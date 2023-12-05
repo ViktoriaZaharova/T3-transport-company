@@ -1,0 +1,19 @@
+footer {
+  color: #fff;
+  background: #393939;
+  position: relative;
+}
+
+.footer-content {
+  margin: 62px 0 69px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  min-width: 945px;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
