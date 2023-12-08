@@ -1,0 +1,478 @@
+@import 'vars'
+
+// home
+.home
+	background: #EBEBEB
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 543px
+		background: url('../img/home-decor.svg') no-repeat center
+		background-size: 100%
+		z-index: -1
+
+.home-content
+	margin: 85px 0 447px
+
+.home-image
+	position: absolute
+	z-index: -2
+	right: 0
+	top: 0
+	max-width: 857px
+	width: 100%
+	height: 100%
+	@include d-flex
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.list-advantages
+	font-size: 24px
+	font-weight: 500
+	display: flex
+	align-items: flex-start
+	&-item
+		display: flex
+		align-items: start
+		margin: 0 50px 20px 0
+		&:first-child
+			.list-advantages-item
+				&__text
+					max-width: 159px
+		&:last-child
+			margin: 0 0 20px
+			.list-advantages-item
+				&__text
+					max-width: 209px
+		&__icon
+			margin: 0 15px 0 0
+			width: 40px
+			height: 40px
+			min-width: 40px
+			@include d-flex
+		&__text
+			max-width: 252px
+
+// advantages-section
+.advantages-section
+	margin: 230px 0 100px
+	position: relative
+	z-index: 1
+	&:before, &:after
+		content: ''
+		position: absolute
+		z-index: -1
+		bottom: 0
+	&::before
+		left: 35px
+		bottom: 54px
+		background: url('../img/adv-decor1.svg') no-repeat center
+		background-size: 100%
+		width: 231px
+		height: 349px
+	&::after
+		width: 253px
+		height: 385px
+		right: 65px
+		background: url('../img/adv-decor2.svg') no-repeat center
+		background-size: 100%
+
+.advantages-section-wrapper
+	width: 100%
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	justify-content: space-between
+
+.advantages-box
+	width: calc(33.33% - 24px)
+	margin: 0 0 40px
+	&__img
+		@include d-flex
+		width: 100%
+		height: 480px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__body
+		width: 100%
+		padding: 65px 0 0
+	.h2
+		font-weight: 500
+		max-width: 280px
+
+.advantages-numbers
+	.advantages-box
+		width: fit-content
+
+// services
+.services
+	margin: 130px 0 100px
+
+.services-box
+	width: 100%
+	&__img
+		@include d-flex
+		height: 406px
+		width: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__body
+		width: 100%
+		padding: 37px 0 0
+	.link
+		margin: 30px 0 0
+	.h3
+		font-size: 35px	
+
+// callback section
+.callback-section
+	h2
+		font-weight: 500
+		margin: 0 0 25px
+
+.callback-wrapper
+	width: 100%
+	display: flex
+	align-items: stretch
+	background: #EBEBEB
+
+.callback-content
+	padding: 53px 50px
+	position: relative
+	z-index: 1
+	width: 50%
+	background: #fff
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 260px
+		height: 215px
+		background: url('../img/callback-decor.svg') no-repeat center
+		background-size: 100%
+	.box-text
+		font-family: $font
+		font-weight: 500
+		max-width: 535px
+
+.callback-form
+	width: 50%
+	padding: 40px 90px 34px 68px
+
+// documents
+.documents
+	margin: 174px 0 35px
+	padding: 0 0 90px
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 248px
+		height: 377px
+		background: url('../img/doc-decor.svg') no-repeat center
+		background-size: 100%
+
+.documents-box
+	width: 100%
+	height: 100%
+	position: relative
+	z-index: 1
+	background: #FFF
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+	display: flex
+	align-items: start
+	padding: 50px 70px
+	&__bg
+		position: absolute
+		z-index: -1
+		bottom: 0
+		right: 0
+	.btn
+		width: fit-content
+	.btn-next
+		position: absolute
+		right: 0
+		bottom: 0
+	&__body
+		width: calc(100% - 80px)
+		padding: 0 0 0 77px
+		.btn
+			margin: 20px 0 0
+	.h3
+		max-width: 250px
+
+.documents-box-archive
+	padding: 47px 10px 40px 25px
+	.documents-box
+
+		&__body
+			padding: 0 0 0 20px
+			width: calc(100% - 52px)
+
+// our-fleet
+.our-fleet
+
+.our-fleet-wrapper
+	position: relative
+	z-index: 1
+
+.our-fleet-slider
+	.slick-track
+		display: flex
+		align-items: center
+	&__nav
+		position: absolute
+		top: 50%
+		transform: translate(-50%,-50%)
+		max-width: 1600px
+		width: 100%
+		left: 50%
+	.slick-slide
+		margin: 0 50px
+		width: 1080px
+		opacity: 0.5
+	.slick-current
+		opacity: 1
+		position: relative
+		z-index: 1
+		width: 1496px
+
+// about
+.about
+	margin: 100px 0 20px
+	position: relative
+	z-index: 1
+	&::before, &::after
+		content: ''
+		position: absolute
+		z-index: -1
+		width: 230px
+		height: 349px
+	&::before
+		top: 30px
+		left: 25px
+		background: url('../img/about-decor1.svg') no-repeat center
+		background-size: 100%
+	&:after
+		bottom: -140px
+		right: 30px
+		background: url('../img/about-decor2.svg') no-repeat center
+		background-size: 100%
+	.box-text
+		font-weight: 500
+		font-size: 36px
+	h2, .h2
+		margin: 0 0 23px
+
+.about-img
+	width: 100%
+	height: 329px
+	@include d-flex
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+// corporate-values
+.corporate-values
+	margin: 0 0 130px
+	h2
+		margin: 0 0 30px
+
+.corporate-values-list
+	width: 100%
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+.corporate-values-box
+	margin: 0 27px 30px 0
+	background: #FFF
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+	padding: 26px 42px
+	font-size: 36px
+	font-weight: 500
+	&:last-child
+		margin: 0 0 30px
+
+.codex-box
+	p
+		font-size: 24px
+		font-weight: normal
+		max-width: 172px
+		margin: 0 0 22px
+
+// news
+.news-wrapper
+	width: 100%
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+
+.news-card
+	margin: 0 auto 30px 0
+	max-width: 428px
+	width: 100%
+	background: #FFF
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+	&__img
+		@include d-flex
+		width: 100%
+		height: 428px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__body
+		width: 100%
+		padding: 25px 15px 25px 30px
+	&__title
+		margin: 0 0 16px
+		color: #393939
+		width: 100%
+
+		&:hover
+			color: $accent
+	.box-text
+		max-height: 140px
+		overflow: hidden
+	.link
+		margin: 25px 0 0
+
+	&:last-child
+		margin: 0 0 30px
+
+// reviews
+.reviews
+	margin: 100px 0 95px
+
+.reviews-slider
+	width: calc(100% + 1500px)
+	.slick-track
+		display: flex
+		align-items: stretch
+	.slick-slide
+		margin: 50px 35px 60px 0
+		width: 574px
+		height: auto
+	&__nav
+		justify-content: flex-start
+		.slick-arrow
+			width: 74px
+			height: 74px
+			padding: 18px
+			background: #F1F1F1
+			stroke: #999999
+			&:hover
+				background: $accent
+				stroke: #fff
+		.slick-next
+			margin: 0 0 0 48px
+
+.reviews-box
+	background: #FFF
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+	width: 100%
+	height: 100%
+	padding: 30px
+	&__head
+		display: flex
+		align-items: center
+		width: 100%
+	&__photo
+		width: 58px
+		height: 58px
+		border-radius: 50%
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__name
+		width: calc(100% - 58px)
+		padding: 0 0 0 14px
+	&__body
+		width: 100%
+		margin: 30px 0 0
+
+// faces-company
+.faces-company-card
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	font-size: 24px
+	&__photo
+		width: 266px
+		height: 326px
+		@include d-flex
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__body
+		width: calc( 100% - 266px )
+		padding: 0 0 0 32px
+	&__position
+		color: $accent
+		margin: 10px 0 40px
+	&__contact
+		margin: 10px 0 0
+
+// vacansies
+.vacansies
+	margin: 70px 0 96px
+
+.vacansies-callback
+	width: 100%
+	background: #fff
+	padding: 60px
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+	h4
+		margin: 28px 0
+		text-transform: uppercase
+	.btn
+		margin: 28px 0 0
+
+.form-vacancies
+	input
+		border: 1px solid #5C6467
+	.label-file
+		min-height: 59px				
+
+// partners
+.partners-bg
+	width: 100%
+	@include d-flex
+	img
+		width: 100%
+
+.partners-wrapper
+	width: 100%
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+.partners-logo
+	@include d-flex
+	width: 14%
+	margin: 0 auto 64px
+	height: 70px
+	padding: 0 15px
+	img
+		max-height: 100%

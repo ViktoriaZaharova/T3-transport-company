@@ -3,9 +3,55 @@ footer {
   background: #393939;
   position: relative;
 }
+footer .phone {
+  margin: 64px 0 13px;
+}
+footer .list-social {
+  margin: 80px 0 0;
+}
+footer .menu {
+  margin: 20px 0 0;
+}
+footer .menu li {
+  margin: 0 0 30px;
+  width: 100%;
+}
+footer .menu li:last-child {
+  margin: 0;
+}
+footer .menu li a {
+  color: #fff;
+}
 
 .footer-content {
   margin: 62px 0 69px;
+}
+
+.address-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 60px;
+}
+.address-box svg {
+  width: 13px;
+  height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  fill: #E21F26;
+  margin: 0 9px 0 0;
 }
 
 .map {

@@ -46,6 +46,9 @@ body
 	background: #fff
 	color: #393939
 
+html, body
+	overflow-x: hidden
+
 img
 	display: block
 	max-width: 100%
@@ -68,19 +71,20 @@ input, textarea, select
 	outline: none
 	box-shadow: none
 	appearance: none
-	padding: 0 15px
+	padding: 10px 23px
 	box-sizing: border-box
-	font-family: $default-font
+	font-family: $font
 	border: none
-	border-radius: 10px
+	border-radius: 0
 	width: 100%
-	height: 54px
-	background: transparent
+	height: 59px
+	background: #fff
 	color: #000
-	font-size: 15px
+	font-size: 20px
+	font-weight: 500
 	cursor: pointer
 	&::placeholder
-		color: #595959
+		color: #393939
 
 	&:hover, &:focus
 		outline: none
@@ -96,7 +100,7 @@ input[type="radio"], input[type="checkbox"]
 label
 	display: block
 	width: 100%
-	margin: 0 0 13px
+	margin: 0 0 22px
 
 	&:last-child
 		margin: 0
@@ -105,6 +109,13 @@ textarea
 	resize: none
 	padding: 12px 17px
 	height: 103px
+
+.consent
+	font-size: 10px
+	font-weight: 500
+	margin: 15px 0 0
+	font-family: $font
+	color: #999
 
 button, .btn
 	outline: none
@@ -133,18 +144,48 @@ button, .btn
 	height: 49px
 	border-radius: 0
 	transition: 0.3s ease
+	.svg-icon
+		margin: 0 0 0 15px
+
+.btn-md
+	height: 59px
 
 .btn-accent
 	background: $accent
 	color: #fff
 	&:hover
 		background: $grey
-		color: #fff	
+		color: #fff
+	.svg-icon
+		fill: #fff
+	.svg-icon-arrow
+		fill: none
+		stroke: #fff
+
+.btn-next
+	.svg-icon
+		margin: 0
+		fill: none
+		stroke: #fff
+		width: 19px
+		height: 37px
 
 .svg-icon
 	display: inline-block
 	width: 100%
 	height: 100%
+
+.svg-icon-view
+	width: 30px
+	height: 22px
+
+.svg-icon-arrow
+	fill: none
+	stroke: inherit
+	width: 18px
+	min-width: 18px
+	height: 10px
+	margin: 0 0 0 15px
 
 strong, b
 	font-weight: bold
@@ -169,25 +210,86 @@ ul, ol
 	> *
 		padding: 0 15px
 
-h1
+h1, .h1
 	font-size: 128px
 	font-weight: bold
-	width: 100%		
+	width: 100%
+	margin: 0 0 50px
 
 h2, .h2
 	font-size: 48px
 	font-weight: bold
-	width: 100%	
+	width: 100%
+	margin: 0
+
+h3, .h3
+	font-size: 36px
+	font-weight: 500
+	width: 100%
+	margin: 0
+
+.box-text
+	font-size: 24px
 
 a.color-grey
 	color: $grey
 	&:hover
 		color: $accent
 
+a.color-accent
+	color: $accent
+	&:hover
+		color: $grey
+
 a.color-inherit
 	color: inherit
 	&:hover
-		color: $accent			
+		color: $accent
+
+.color-blue
+	color: #00519A
+
+.color-red
+	color: #E21F26
+
+.color-violet
+	color: #A42381
+
+.font-500
+	font-weight: 500
+
+.list-social
+	display: flex
+	align-items: center
+	li
+		margin: 0 44px 0 0
+		&:last-child
+			margin: 0
+		a
+			@include d-flex
+			fill: #fff
+			width: 57px
+			height: 33px
+			&:hover
+				fill: $accent
+		.tg-link
+			width: 48px
+			height: 42px
+
+.mb-22
+	margin-bottom: 22px
+
+.mb-40
+	margin-bottom: 40px
+
+.mb-45
+	margin-bottom: 45px
+
+.mb-50
+	margin-bottom: 50px
+
+.mb-60
+	margin-bottom: 60px
 
 // slick	
 .slick-slider
@@ -196,30 +298,146 @@ a.color-inherit
 .slick-slide
 	outline: none
 
-//checkbox my
-.label-checkbox
-	position: relative
+.slider-nav
 	display: flex
-	align-items: flex-start
-	color: rgba(255, 255, 255, 0.5)
-	font-size: 14px
-	margin: 15px 0 0
-	line-height: 1.14
+	align-items: center
+	justify-content: space-between
+	width: 100%
 
-.inp-check
-	display: none
-
-.checkbox-custom
-	margin: 0 12px 0 0
+.slick-arrow
+	@include d-flex
+	stroke: #fff
+	fill: none
+	background: $accent
+	width: 110px
+	height: 110px
+	padding: 28px
 	position: relative
-	border-radius: 6px
-	background-color: #fff
-	width: 16px
-	height: 16px
-	min-width: 16px
+	z-index: 1
 	cursor: pointer
+	transition: .3s
 
-.inp-check:checked ~ .checkbox-custom
-	background: #fff url("../img/check-black.svg") no-repeat center
-	background-size: 8px
-//checkbox my end
+.slick-dots
+	width: 100%
+	padding: 0
+	position: absolute
+	z-index: 1
+	bottom: 36px
+	display: flex
+	align-items: center
+	justify-content: center
+	li
+		cursor: pointer
+		@include d-flex
+		transition: .3s
+		margin: 0 25px 0 0
+		width: 30px
+		height: 30px
+		border: 1px solid #fff
+		border-radius: 50%
+		&:last-child
+			margin: 0
+		button
+			display: none
+		&.slick-active
+			background: $accent
+			border-color: $accent
+
+// label file my
+.label-file
+	display: flex
+	align-items: center
+	color: $accent
+	font-weight: 500
+	font-size: 16px
+	cursor: pointer
+	input
+		display: none
+	&__icon
+		width: 18px
+		height: 20px
+		margin: 0 15px 0 0
+		@include d-flex
+
+.nav-tabs
+	border: none
+	border-radius: 0
+	width: 100%
+	color: #969696
+	font-size: 48px
+
+	.nav-link
+		padding: 0 0 12px
+		border: none
+		border-bottom: 1px solid transparent
+		color: #969696
+		&.active
+			border-bottom-color: $accent
+			font-weight: bold
+			color: #393933
+	.nav-item
+		margin: 0 40px 0 0
+		&:last-child
+			margin: 0
+
+.tab-content
+	width: 100%
+	margin: 50px 0 0
+
+.accordeon
+	border: none
+	border-radius: 0
+
+.accordion-item
+	border: none
+	border-radius: 0
+	margin: 0 0 30px
+	&:last-child
+		margin: 0
+	&:first-child, &:last-child
+		border: none
+		border-radius: 0
+	&:last-of-type
+		.accordion-button
+			border-radius: 0
+			&.collapsed
+				border-radius: 0
+	&:first-of-type
+		.accordion-button
+			border-radius: 0			
+
+.accordion-button
+	border: none
+	border-radius: 0
+	border-bottom: 1px solid #8C8C8C
+	padding: 0 36px 20px 0
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	box-shadow: none
+	outline: none
+	&:focus
+		box-shadow: none
+		border-color: #8C8C8C
+
+	&:not(.collapsed)
+		border-radius: 0
+		background: transparent
+		color: #393939
+		&:after
+			background: url('../img/arrow-bottom.svg') no-repeat center
+			background-size: 100%
+			transform: rotate(180deg)
+			margin: 0 0 0 auto
+	&:after
+		margin: 0 0 0 auto
+		width: 27px
+		height: 14px
+		background: url('../img/arrow-bottom.svg') no-repeat center
+		background-size: 100%
+
+.accordion-body
+	padding: 12px 0 30px
+	.box-text
+		margin: 0 0 40px
+		max-width: 640px		
