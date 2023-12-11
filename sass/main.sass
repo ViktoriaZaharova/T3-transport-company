@@ -66,24 +66,31 @@
 	margin: 230px 0 100px
 	position: relative
 	z-index: 1
-	&:before, &:after
-		content: ''
-		position: absolute
-		z-index: -1
-		bottom: 0
-	&::before
-		left: 35px
-		bottom: 54px
-		background: url('../img/adv-decor1.svg') no-repeat center
-		background-size: 100%
-		width: 231px
-		height: 349px
-	&::after
-		width: 253px
-		height: 385px
-		right: 65px
-		background: url('../img/adv-decor2.svg') no-repeat center
-		background-size: 100%
+
+.scene
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+
+.decor
+	position: absolute
+	z-index: -1
+	bottom: 0
+
+.decor1
+	left: 35px
+	bottom: 54px
+	width: 231px
+	height: 349px
+
+.decor2
+	width: 253px
+	height: 385px
+	right: 65px !important
+	left: auto !important
 
 .advantages-section-wrapper
 	width: 100%
@@ -180,15 +187,13 @@
 	padding: 0 0 90px
 	position: relative
 	z-index: 1
-	&::before
-		content: ''
-		position: absolute
-		right: 0
-		bottom: 0
-		width: 248px
-		height: 377px
-		background: url('../img/doc-decor.svg') no-repeat center
-		background-size: 100%
+
+.decor3
+	right: 0 !important
+	left: 90% !important
+	bottom: 0
+	width: 248px
+	height: 377px
 
 .documents-box
 	width: 100%
@@ -252,41 +257,44 @@
 		width: 100%
 		left: 50%
 	.slick-slide
-		margin: 0 50px
-		width: 1080px
+		margin: 0 20px
 		opacity: 0.5
+		transition: .3s
+		width: 1496px
+		transform: scale(0.8,0.8)
 	.slick-current
 		opacity: 1
 		position: relative
 		z-index: 1
-		width: 1496px
+		transform: none
 
 // about
 .about
 	margin: 100px 0 20px
 	position: relative
 	z-index: 1
-	&::before, &::after
-		content: ''
-		position: absolute
-		z-index: -1
-		width: 230px
-		height: 349px
-	&::before
-		top: 30px
-		left: 25px
-		background: url('../img/about-decor1.svg') no-repeat center
-		background-size: 100%
-	&:after
-		bottom: -140px
-		right: 30px
-		background: url('../img/about-decor2.svg') no-repeat center
-		background-size: 100%
+
 	.box-text
 		font-weight: 500
 		font-size: 36px
 	h2, .h2
 		margin: 0 0 23px
+
+.decor4, .decor5
+	position: absolute
+	z-index: -1
+	width: 230px
+	height: 349px
+
+.decor4
+	top: 30px
+	left: 25px !important
+
+.decor5
+	bottom: -140px !important
+	top: auto !important
+	right: 30px !important
+	left: auto !important
 
 .about-img
 	width: 100%
@@ -445,6 +453,11 @@
 		margin: 10px 0 40px
 	&__contact
 		margin: 10px 0 0
+
+.faces-col
+	display: none
+	&:nth-child(-n+4)
+		display: block
 
 // vacansies
 .vacansies

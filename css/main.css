@@ -97,26 +97,34 @@
   position: relative;
   z-index: 1;
 }
-.advantages-section:before, .advantages-section:after {
-  content: "";
+
+.scene {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.decor {
   position: absolute;
   z-index: -1;
   bottom: 0;
 }
-.advantages-section::before {
+
+.decor1 {
   left: 35px;
   bottom: 54px;
-  background: url("../img/adv-decor1.svg") no-repeat center;
-  background-size: 100%;
   width: 231px;
   height: 349px;
 }
-.advantages-section::after {
+
+.decor2 {
   width: 253px;
   height: 385px;
-  right: 65px;
-  background: url("../img/adv-decor2.svg") no-repeat center;
-  background-size: 100%;
+  right: 65px !important;
+  left: auto !important;
 }
 
 .advantages-section-wrapper {
@@ -263,15 +271,13 @@
   position: relative;
   z-index: 1;
 }
-.documents::before {
-  content: "";
-  position: absolute;
-  right: 0;
+
+.decor3 {
+  right: 0 !important;
+  left: 90% !important;
   bottom: 0;
   width: 248px;
   height: 377px;
-  background: url("../img/doc-decor.svg") no-repeat center;
-  background-size: 100%;
 }
 
 .documents-box {
@@ -358,15 +364,20 @@
   left: 50%;
 }
 .our-fleet-slider .slick-slide {
-  margin: 0 50px;
-  width: 1080px;
+  margin: 0 20px;
   opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 1496px;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
 }
 .our-fleet-slider .slick-current {
   opacity: 1;
   position: relative;
   z-index: 1;
-  width: 1496px;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .about {
@@ -374,31 +385,31 @@
   position: relative;
   z-index: 1;
 }
-.about::before, .about::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 230px;
-  height: 349px;
-}
-.about::before {
-  top: 30px;
-  left: 25px;
-  background: url("../img/about-decor1.svg") no-repeat center;
-  background-size: 100%;
-}
-.about:after {
-  bottom: -140px;
-  right: 30px;
-  background: url("../img/about-decor2.svg") no-repeat center;
-  background-size: 100%;
-}
 .about .box-text {
   font-weight: 500;
   font-size: 36px;
 }
 .about h2, .about .h2 {
   margin: 0 0 23px;
+}
+
+.decor4, .decor5 {
+  position: absolute;
+  z-index: -1;
+  width: 230px;
+  height: 349px;
+}
+
+.decor4 {
+  top: 30px;
+  left: 25px !important;
+}
+
+.decor5 {
+  bottom: -140px !important;
+  top: auto !important;
+  right: 30px !important;
+  left: auto !important;
 }
 
 .about-img {
@@ -644,6 +655,13 @@
 }
 .faces-company-card__contact {
   margin: 10px 0 0;
+}
+
+.faces-col {
+  display: none;
+}
+.faces-col:nth-child(-n+4) {
+  display: block;
 }
 
 .vacansies {

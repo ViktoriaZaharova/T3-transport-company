@@ -63,6 +63,59 @@ $('.go_to').click(function (e) {
 			scrollTop: $(scroll_el).offset().top
 		}, 500);
 	}
-	return false;
 	$('.mobile-menu').fadeOut();
+	return false;
 });
+
+$('.btn-toggle').on('click', function (e) {
+	e.preventDefault();
+	$('.faces-col:hidden').fadeIn();
+	var onBlock = $('.faces-col:hidden').length;
+	if (onBlock <= 0) {
+		$(this).hide();
+	}
+});
+
+// animate number
+var target = $('.benefits__inner');
+var targetPos = target.offset().top;
+var winHeight = $(window).height();
+var scrollToElem = targetPos - winHeight;
+$(window).scroll(function () {
+	var winScrollTop = $(this).scrollTop();
+	if (winScrollTop > scrollToElem) {
+		$({ blurRadius: 5 }).animate(
+			{ blurRadius: 0 },
+			{
+				duration: 3500,
+				easing: "swing",
+			}
+		);
+		var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
+			" "
+		);
+		$(".benefits__number").each(function () {
+			var tcount = $(this).data("count");
+			$(this).animateNumber(
+				{
+					number: tcount,
+					easing: "easeInQuad",
+					numberStep: comma_separator_number_step
+				},
+				1000
+			);
+		});
+	}
+});
+
+new WOW().init();
+
+// parallax
+var scene1 = document.getElementById('scene1');
+var parallaxInstance1 = new Parallax(scene1);
+
+var scene2 = document.getElementById('scene2');
+var parallaxInstance2 = new Parallax(scene2);
+
+var scene3 = document.getElementById('scene3');
+var parallaxInstance3 = new Parallax(scene3);

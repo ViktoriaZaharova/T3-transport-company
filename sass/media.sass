@@ -9,7 +9,7 @@
 	.nav-menu
 		margin: 0 auto
 
-	.our-fleet-slider .slick-current
+	.our-fleet-slider .slick-slide
 		width: 1200px
 
 	.reviews-slider
@@ -83,10 +83,9 @@
 
 	.our-fleet-slider
 		.slick-slide
-			width: 700px
+			width: 900px
 			margin: 0 20px
-		.slick-current
-			width: 990px
+		
 
 	.slick-dots li
 		width: 20px
@@ -113,6 +112,9 @@
 		width: calc(100% + 200px)
 
 @media only screen and (max-width: 1450px)
+	.wrapper
+		padding: 95px 0 0
+
 	.menu
 		font-size: 18px
 		li
@@ -246,8 +248,6 @@
 
 	.our-fleet-slider
 		.slick-slide
-			width: 500px
-		.slick-current
 			width: 700px
 		&__nav
 			max-width: 700px
@@ -266,6 +266,17 @@
 
 	.vacansies-callback h4
 		margin: 20px 0
+
+	.modal-v2
+		.modal-body
+			padding: 30px
+			width: calc(100% - 500px)
+			.btn
+				margin: 30px 0 0
+		.modal-header
+			max-width: 500px		
+		.modal-title
+			margin: 0 0 30px			
 
 @media only screen and (max-width: 992px)
 	.home-image
@@ -299,6 +310,9 @@
 	.mb-60
 		margin-bottom: 40px
 
+	.mb-70
+		margin-bottom: 45px	
+
 	.callback-content, .callback-form
 		width: 100%
 		padding: 30px
@@ -306,7 +320,7 @@
 	.about-img
 		height: auto
 
-	.about::before, .about::after
+	.decor4, .decor5
 		width: 160px
 		height: 280px		
 
@@ -341,14 +355,12 @@
 		.list-social
 			margin: 30px 0 0
 
-	.documents::before
+	.decor3
 		width: 210px
 		height: 325px
 
 	.our-fleet-slider
 		.slick-slide
-			width: 300px
-		.slick-current
 			width: 400px
 		&__nav
 			max-width: 400px
@@ -362,8 +374,16 @@
 	.services-box__img
 		height: 300px
 
-@media only screen and (max-width: 768px)
+	.modal-v2
+		.modal-header
+			max-width: 300px
+		.modal-body
+			width: calc(100% - 300px)		
 
+@media only screen and (max-width: 768px)
+	.scene
+		display: none
+		
 	.phone
 		font-size: 20px
 
@@ -413,6 +433,27 @@
 
 	.reviews-box
 		box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1)		
+
+	.modal-v2
+		.modal-content
+			flex-direction: column
+			align-items: flex-start
+		.modal-header
+			max-width: none
+			width: 100%
+			order: 1
+		.modal-body
+			width: 100%		
+			.box-text
+				max-width: none
+
+
+	.modal-content .btn-close
+		right: 15px
+		top: 15px
+
+	#callbackModal .modal-title
+		font-size: 20px
 
 @media only screen and (max-width: 576px)
 
@@ -488,8 +529,6 @@
 		.slick-slide
 			width: 100%
 			margin: 0
-		.slick-current
-			width: 100%
 		&__nav
 			max-width: none		
 
@@ -504,5 +543,13 @@
 	.reviews-box
 		padding: 20px
 
-	.about::before, .about::after, .advantages-section:before, .advantages-section:after
-		display: none	
+	.document-card
+		&__body
+			padding: 0 0 0 20px
+			width: calc(100% - 30px)
+		&__icon
+			width: 30px
+		.btn
+			margin: 20px 0 0
+		.h3
+			font-size: 18px				
