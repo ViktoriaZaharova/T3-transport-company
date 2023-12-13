@@ -293,6 +293,8 @@ ul, ol {
 .container {
   max-width: 1830px;
   padding: 0 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .row {

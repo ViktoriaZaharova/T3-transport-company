@@ -389,7 +389,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  .scene {
+  .decor {
     display: none;
   }
   .phone {
