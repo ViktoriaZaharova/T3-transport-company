@@ -45,27 +45,30 @@ body
 	font-weight: normal
 	background: #fff
 	color: #393939
+	overscroll-behavior-y: none
 
 html, body
 	overflow-x: hidden
 
-html
-	position: relative
-	z-index: 1
-	&::before, &::after
-		content: ''
-		position: absolute
-		left: 0
-		width: 100%
-		height: 111px
-		background: url('../img/footer-decor.svg') no-repeat center top
-		background-size: cover
-		z-index: -1
-		display: none
-	&::before
-		top: 0	
-	&::after
-		bottom: 0
+	
+
+// html
+// 	position: relative
+// 	z-index: 1
+	// &::before, &::after
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 111px
+	// 	background: url('../img/footer-decor.svg') no-repeat center top
+	// 	background-size: cover
+	// 	z-index: -1
+	// 	display: none
+	// &::before
+	// 	top: 0	
+	// &::after
+	// 	bottom: 0
 
 .wrapper
 	width: 100%
