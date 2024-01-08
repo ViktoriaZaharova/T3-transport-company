@@ -52,6 +52,24 @@ html, body
 .wrapper
 	width: 100%
 	padding: 151px 0 0	
+	position: relative
+	z-index: 1
+	&::before, &::after
+		content: ''
+		position: absolute
+		left: 0
+		width: 100%
+		height: 111px
+		background: url('../img/footer-decor.svg') no-repeat center top
+		background-size: cover
+		z-index: -1
+		display: none
+	&::before
+		top: 0	
+	&::after
+		bottom: 0
+			
+
 
 img
 	display: block
@@ -214,11 +232,15 @@ ul, ol
 		padding: 0 15px
 
 h1, .h1
-	font-size: 128px
+	font-size: 126px
 	line-height: normal
 	font-weight: bold
 	width: 100%
-	margin: 0 0 50px
+	margin: 0 0 18px
+
+.h1
+	font-size: 128px
+	color: $accent	
 
 h2, .h2
 	font-size: 48px
@@ -296,6 +318,9 @@ a.color-inherit
 
 .mb-60
 	margin-bottom: 60px
+
+.mb-65
+	margin-bottom: 65px	
 
 .mb-70
 	margin-bottom: 70px	
@@ -379,10 +404,13 @@ a.color-inherit
 		padding: 0 0 12px
 		border: none
 		border-bottom: 1px solid transparent
+		border-radius: 0
 		color: #969696
+		background: transparent
 		&.active
 			border-bottom-color: $accent
 			font-weight: bold
+			background: transparent
 			color: #393933
 	.nav-item
 		margin: 0 40px 0 0
@@ -401,6 +429,7 @@ a.color-inherit
 	border: none
 	border-radius: 0
 	margin: 0 0 30px
+	background: transparent
 	&:last-child
 		margin: 0
 	&:first-child, &:last-child
@@ -425,6 +454,7 @@ a.color-inherit
 	flex-wrap: wrap
 	box-shadow: none
 	outline: none
+	background: transparent
 	&:focus
 		box-shadow: none
 		border-color: #8C8C8C

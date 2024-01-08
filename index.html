@@ -28,13 +28,16 @@
 
 		<div class="mobile-menu">
 			<div class="mobile-menu__head">
-				<a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
-				<div class="mobile-menu__close"></div>
+				<a href="index.html" class="logo"><img src="img/logo-icon.svg" alt=""></a>
+				<div class="mobile-menu__close"><svg class="svg-icon">
+						<use xlink:href="img/sprite.svg#close"></use>
+					</svg></div>
 			</div>
 			<div class="mobile-menu__body">
 				<ul class="menu my-ul">
 					<li><a href="#about" class="go_to">О компании</a></li>
 					<li><a href="#documents" class="go_to">Документация</a></li>
+					<li><a href="#services" class="go_to">Услуги</a></li>
 					<li><a href="#documents" class="go_to">Условия доставки</a></li>
 					<li><a href="#contacts" class="go_to">Контакты</a></li>
 				</ul>
@@ -51,12 +54,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 d-flex flex-wrap align-items-center">
-						<a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+						<a href="index.html" class="logo">
+							<span class="logo-icon"><img src="img/logo-icon.svg" alt=""></span>
+							<span class="logo-text"><img src="img/logo-text.svg" alt=""></span></a>
 						<nav class="nav-menu">
 							<ul class="menu my-ul">
 								<li><a href="#about" class="go_to">О компании</a></li>
-								<li><a href="#documents" class="go_to">Документация</a></li>
-								<li><a href="#documents" class="go_to">Условия доставки</a></li>
+								<li><a href="#services" class="go_to">Услуги</a></li>
 								<li><a href="#contacts" class="go_to">Контакты</a></li>
 							</ul>
 						</nav>
@@ -82,6 +86,7 @@
 				<div class="row">
 					<div class="col-12 col-lg-7">
 						<div class="home-content">
+							<a href="tel:+78005641879" class="phone">8 800 564 18 79</a>
 							<h1 class="wow animate__animated animate__fadeIn">Везде. Всегда. Вовремя.</h1>
 							<div class="list-advantages">
 								<div class="list-advantages-item wow animate__animated animate__fadeIn">
@@ -110,48 +115,21 @@
 									</div>
 								</div>
 							</div>
+
+							<a href="#" class="link-tg wow animate__animated animate__fadeIn" target="_blank">
+								<span class="link-tg__icon">
+									<svg class="svg-icon">
+										<use xlink:href="img/sprite.svg#tg"></use>
+									</svg>
+								</span>
+								<span class="link-tg__text">наш канал в Telegram</span>
+							</a>
 						</div>
 					</div>
-					<div class="col-12 col-lg-5">
-						<div class="home-image wow animate__animated animate__fadeIn"><img src="img/home-img.jpg" alt=""></div>
-					</div>
+
 				</div>
 			</div>
 		</main>
-
-		<div class="advantages-section">
-				<div class="decor decor1 rellax" data-rellax-speed="-4"><img src="img/adv-decor1.svg" alt=""></div>
-				<div class="decor decor2 rellax" data-rellax-speed="-4"><img src="img/adv-decor2.svg" alt=""></div>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-10 offset-lg-1">
-						<div class="advantages-section-wrapper">
-							<div class="advantages-box wow animate__animated animate__fadeIn">
-								<div class="advantages-box__img"><img src="img/adv-img1.jpg" alt=""></div>
-								<div class="advantages-box__body">
-									<div class="h2">Новая компания</div>
-								</div>
-							</div>
-							<div class="advantages-box wow animate__animated animate__fadeIn">
-								<div class="advantages-box__img"><img src="img/adv-img2.jpg" alt=""></div>
-								<div class="advantages-box__body">
-									<div class="h2">
-										Новые машины
-									</div>
-								</div>
-							</div>
-							<div class="advantages-box wow animate__animated animate__fadeIn">
-								<div class="advantages-box__img"><img src="img/adv-img3.jpg" alt=""></div>
-								<div class="advantages-box__body">
-									<div class="h2">Опытные водители</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="advantages-numbers">
 			<div class="container">
@@ -176,7 +154,58 @@
 			</div>
 		</div>
 
-		<section class="services">
+		<div class="advantages-section">
+			<div class="decor decor1 rellax" data-rellax-speed="-4"><img src="img/adv-decor1.svg" alt=""></div>
+			<div class="decor decor2 rellax" data-rellax-speed="-4"><img src="img/adv-decor2.svg" alt=""></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-10 offset-lg-1 mb-65">
+						<h2>Преимущества</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-lg-10 offset-lg-1">
+						<div class="advantages-section-wrapper">
+							<div class="advantages-box wow animate__animated animate__fadeIn">
+								<div class="advantages-box__img"><img src="img/adv-img1.jpg" alt=""></div>
+								<div class="advantages-box__body">
+									<div class="h2">Новая компания</div>
+								</div>
+							</div>
+							<div class="advantages-box wow animate__animated animate__fadeIn">
+								<div class="advantages-box__img"><img src="img/adv-img2.jpg" alt=""></div>
+								<div class="advantages-box__body">
+									<div class="h2">
+										Новые машины
+									</div>
+								</div>
+							</div>
+							<div class="advantages-box wow animate__animated animate__fadeIn">
+								<div class="advantages-box__img">
+									<div class="advantages-slider">
+										<div class="slide">
+											<img src="img/adv-img3.jpg" alt="">
+										</div>
+										<div class="slide">
+											<img src="img/adv-img3.jpg" alt="">
+										</div>
+										<div class="slide">
+											<img src="img/adv-img3.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="advantages-box__body">
+									<div class="h2">Опытные водители</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="services" id="services">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-10 offset-lg-1 mb-50">
@@ -184,7 +213,18 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 col-sm-6 col-lg-5 offset-lg-1 mb-50">
+					<div class="col-12 col-lg-7 mb-50 offset-lg-1">
+						<div class="services-box services-box-max wow animate__animated animate__fadeIn">
+							<div class="services-box__img"><img src="img/service-img0.jpg" alt=""></div>
+							<div class="services-box__body">
+								<div class="h3">Автомобиль с водителем в управлении нашей компании
+								</div>
+								<a href="#" class="color-accent font-500 link" data-bs-toggle="modal"
+									data-bs-target="#servicesModal">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 d-flex flex-wrap">
 						<div class="services-box wow animate__animated animate__fadeIn">
 							<div class="services-box__img"><img src="img/service-img1.jpg" alt=""></div>
 							<div class="services-box__body">
@@ -193,8 +233,6 @@
 									data-bs-target="#servicesModal">Подробнее</a>
 							</div>
 						</div>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-5 mb-50">
 						<div class="services-box wow animate__animated animate__fadeIn">
 							<div class="services-box__img"><img src="img/service-img2.jpg" alt=""></div>
 							<div class="services-box__body">
@@ -205,6 +243,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>
@@ -247,9 +286,9 @@
 		</div>
 
 		<div class="documents" id="documents">
-		
-				<div class="decor decor3 rellax" data-rellax-speed="-4"><img src="img/doc-decor.svg" alt=""></div>
-	
+
+			<div class="decor decor3 rellax" data-rellax-speed="-4"><img src="img/doc-decor.svg" alt=""></div>
+
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-10 offset-lg-1">
@@ -402,10 +441,10 @@
 		</section>
 
 		<section class="about" id="about">
-		
-				<div class="decor decor4 rellax" data-rellax-speed="-4"><img src="img/about-decor1.svg" alt=""></div>
-				<div class="decor decor5 rellax" data-rellax-speed="-4"><img src="img/about-decor2.svg" alt=""></div>
-		
+
+			<div class="decor decor4 rellax" data-rellax-speed="-4"><img src="img/about-decor1.svg" alt=""></div>
+			<div class="decor decor5 rellax" data-rellax-speed="-4"><img src="img/about-decor2.svg" alt=""></div>
+
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-12 col-lg-5 order-lg-1 mb-60">
@@ -624,7 +663,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face1.png" alt="">
@@ -638,7 +677,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-5 mb-4 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 mb-4 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face2.png" alt="">
@@ -652,7 +691,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face3.png" alt="">
@@ -666,7 +705,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-5 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face4.png" alt="">
@@ -680,7 +719,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face1.png" alt="">
@@ -694,7 +733,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-5 mb-4 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 mb-4 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face2.png" alt="">
@@ -708,7 +747,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
+					<div class="col-6 col-lg-5 offset-lg-1 mb-45 faces-col wow animate__animated animate__fadeIn">
 						<div class="faces-company-card">
 							<div class="faces-company-card__photo">
 								<img src="img/face3.png" alt="">
@@ -1015,7 +1054,7 @@
 							<div class="row">
 								<div class="col-12 col-sm-6">
 									<div class="footer-col">
-										<a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+										<a href="index.html" class="logo"><img src="img/logo-footer.svg" alt=""></a>
 										<a href="tel:+78005641879" class="phone color-inherit">8 800 564 18 79</a>
 										<div class="address-box">
 											<svg class="svg-icon">
@@ -1159,8 +1198,7 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="archiveModal" tabindex="-1" aria-labelledby="archiveModalLabel"
-		aria-hidden="true">
+	<div class="modal fade" id="archiveModal" tabindex="-1" aria-labelledby="archiveModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>

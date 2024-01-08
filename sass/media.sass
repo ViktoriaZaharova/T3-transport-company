@@ -15,11 +15,11 @@
 	.reviews-slider
 		width: calc(100% + 1000px)
 
-	.address-box
-		font-size: 16px
+	// .address-box
+	// 	font-size: 20px
 
-	.home-image
-		max-width: 700px
+	// .home-image
+	// 	max-width: 700px
 
 	h1, .h1
 		font-size: 100px
@@ -43,14 +43,6 @@
 	.list-advantages
 		font-size: 18px
 
-	.list-advantages-item
-		margin: 0 20px 10px 0
-		&:last-child
-			margin: 0 0 10px
-
-	.list-advantages-item:first-child .list-advantages-item__text
-		max-width: 125px
-
 	.advantages-section
 		margin: 120px 0 70px
 
@@ -60,17 +52,20 @@
 	h3, .h3
 		font-size: 26px
 
-	.home-image
-		max-width: 500px
+	// .home-image
+	// 	max-width: 500px
 
 	.documents-box
 		padding: 30px
 		&__body
 			padding: 0 0 0 50px
 
-	.documents-box-archive .btn-next
-		width: 50px
-		height: 50px
+	.documents-box-archive
+		padding: 16px 30px
+		align-items: center
+		.btn-next
+			width: 74px
+			height: 100%
 
 	.slick-arrow
 		width: 50px
@@ -85,7 +80,6 @@
 		.slick-slide
 			width: 900px
 			margin: 0 20px
-		
 
 	.slick-dots li
 		width: 20px
@@ -99,11 +93,11 @@
 
 	.corporate-values-box
 		font-size: 26px
-		padding: 15px 30px
+		padding: 26px 42px
 
 	.codex-box p
-		font-size: 18px
-		margin: 0 0 10px
+		font-size: 24px
+		margin: 0 auto 22px
 
 	.news-card
 		max-width: calc(33.33% - 20px)
@@ -121,17 +115,21 @@
 			margin: 0 20px 0 0
 
 	header
-		padding: 20px 0
+		padding: 24px 0 31px
 
 	.phone
 		font-size: 24px
 
 	.btn-burger
-		width: 30px
-		height: 24px
+		width: 31px
+		height: 31px
 
-	.logo
-		max-width: 120px
+	.logo-text
+		max-width: 170px
+		margin: 0 0 0 14px
+
+	.logo-icon
+		max-width: 104px
 
 	h1, .h1
 		font-size: 90px
@@ -185,7 +183,21 @@
 	.news-card
 		max-width: calc(50% - 20px)
 
+	.advantages-numbers .advantages-box
+		padding: 0 10px 0 0
+		&:last-child
+			padding: 0
+		&::before
+			right: 0
+
+	footer
+		.menu
+			font-size: 20px
+
 @media only screen and (max-width: 1200px)
+	header
+		.logo
+			margin: 0 auto 0 0
 
 	.address-box
 		margin: 0 0 30px
@@ -194,7 +206,7 @@
 		font-size: 24px
 
 	.advantages-section
-		margin: 90px 0 60px
+		margin: 84px 0 66px
 
 	h1, .h1
 		font-size: 70px
@@ -208,20 +220,6 @@
 	.advantages-box
 		&__body
 			padding: 20px 0 0
-
-	.list-advantages
-		flex-wrap: wrap
-
-	.list-advantages-item
-		width: 100%
-		margin: 0 0 20px
-		&:last-child
-			margin: 0
-		&__text
-			max-width: none
-
-	.list-advantages-item:first-child .list-advantages-item__text, .list-advantages-item:last-child .list-advantages-item__text
-		max-width: none
 
 	header
 		.nav-menu
@@ -242,7 +240,7 @@
 		&__body
 			padding: 20px 0 0
 		.h3
-			font-size: 26px
+			font-size: 24px
 		.link
 			margin: 20px 0 0
 
@@ -274,15 +272,26 @@
 			.btn
 				margin: 30px 0 0
 		.modal-header
-			max-width: 500px		
+			max-width: 500px
 		.modal-title
-			margin: 0 0 30px			
+			margin: 0 0 30px
 
 @media only screen and (max-width: 992px)
-	.home-image
-		position: relative
-		max-width: none
-		height: auto
+	.services-box-max
+		padding: 0 0 24px
+		&::before
+			right: auto
+			left: 0
+			height: 421px
+		.services-box__body
+			padding: 27px 29px 0
+		.services-box__img
+			width: calc(100% - 43px)
+			height: 409px
+
+	.home
+		h1
+			max-width: 565px
 
 	.home-content
 		margin: 30px 0
@@ -292,11 +301,24 @@
 
 	.advantages-box
 		width: calc(50% - 15px)
-		margin: 0 0 30px
+		margin: 0 0 40px
 
 	.advantages-numbers
 		.advantages-box
+			text-align: center
 			width: 100%
+			padding: 15px 20px
+			background: #FFF
+			box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.10)
+			&:last-child
+				padding: 15px 20px
+			&::before
+				display: none
+			.h1
+				width: 100%
+				padding: 0 0 15px
+				margin: 0 0 15px
+				border-bottom: 1px solid #000
 
 	.mb-40
 		margin-bottom: 25px
@@ -311,7 +333,7 @@
 		margin-bottom: 40px
 
 	.mb-70
-		margin-bottom: 45px	
+		margin-bottom: 45px
 
 	.callback-content, .callback-form
 		width: 100%
@@ -322,7 +344,7 @@
 
 	.decor4, .decor5
 		width: 160px
-		height: 280px		
+		height: 280px
 
 	.reviews-slider__nav
 		.slick-arrow
@@ -347,7 +369,8 @@
 
 	.map
 		min-width: auto
-		height: 300px
+		height: 455px
+		margin: 0 0 26px
 
 	footer
 		.menu
@@ -372,18 +395,93 @@
 		font-size: 28px
 
 	.services-box__img
-		height: 300px
+		height: 250px
 
 	.modal-v2
 		.modal-header
 			max-width: 300px
 		.modal-body
-			width: calc(100% - 300px)		
+			width: calc(100% - 300px)
+
+	.faces-company-card
+		&__photo
+			height: 500px
+			width: 100%
+		&__body
+			width: 100%
+			padding: 20px 0 0
+
+@media only screen and (max-width: 870px)
+	header
+		.phone, .btn-callback
+			display: none
+
+	.home
+		background: url('../img/home-bg-mobile.jpg') no-repeat center
+		background-size: cover
+		&::before
+			display: none
+		.phone
+			display: block
+			margin: 0 auto 20px
+			font-size: 48px
+		h1
+			padding: 20px
+			max-width: 331px
+			margin: 0 0 406px
+		.link-tg
+			display: flex
+
+	.home-content
+		position: relative
+		margin: 16px 0 0
+
+	h1, .h1
+		font-size: 40px
+
+	.list-advantages
+		padding: 25px 29px 27px 0
+		margin: 0 0 -126px
+		max-width: 243px
+		&::before
+			width: 615px
+
+	.advantages-numbers
+		.advantages-box
+			.h1
+				font-size: 64px
 
 @media only screen and (max-width: 768px)
-	.decor
-		display: none
-		
+	// .decor
+	// 	display: none
+
+	.decor1, .decor2
+		width: 164px
+		height: 250px
+		display: block
+
+	.decor1
+		right: 31px !important
+		left: auto !important
+
+	.decor2
+		right: auto !important
+		left: 23px !important
+		top: 123px
+		bottom: auto
+
+	.decor3
+		width: 164px
+		height: 249px
+
+	.decor4
+		width: 95px
+		height: 145px
+
+	.decor5
+		width: 80px
+		height: 122px
+
 	.phone
 		font-size: 20px
 
@@ -394,45 +492,52 @@
 		font-size: 30px
 
 	h3, .h3, .nav-tabs
-		font-size: 22px
+		font-size: 24px
 
 	.nav-tabs .nav-item
 		margin: 0 20px 0 0
 		&:last-child
 			margin: 0
 
-	header
-		.phone, .btn-callback
-			display: none
-
 	.partners-logo
 		width: 25%
 
+	.corporate-values
+		text-align: center
+		.btn
+			margin: 0 auto
+
+	.corporate-values-list
+		flex-direction: column
+		align-items: center
+
 	.corporate-values-box
-		width: 100%
-		font-size: 18px
-		margin: 0 0 15px
+		width: fit-content
+		font-size: 24px
+		margin: 0 auto 27px
+		text-align: center
 		&:last-child
-			margin: 0
+			margin: 0 auto
 
 	.codex-box
 		p
 			max-width: none
 
 	.about
-		margin: 60px 0 20px
+		margin: 105px 0 70px
 
 	.reviews
-		margin: 70px 0 	
+		margin: 70px 0
 
 	.reviews-slider
-		width: 100%
+		width: calc(100% + 15px)
 		.slick-slide
+			width: 249px
 			margin: 0
 			padding: 30px 10px
 
 	.reviews-box
-		box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1)		
+		box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1)
 
 	.modal-v2
 		.modal-content
@@ -443,10 +548,9 @@
 			width: 100%
 			order: 1
 		.modal-body
-			width: 100%		
+			width: 100%
 			.box-text
 				max-width: none
-
 
 	.modal-content .btn-close
 		right: 15px
@@ -455,31 +559,55 @@
 	#callbackModal .modal-title
 		font-size: 20px
 
+	.wrapper
+		&::before, &::after
+			display: block
+
 @media only screen and (max-width: 576px)
 
 	.phone
 		font-size: 16px
 
 	h1, .h1
-		font-size: 30px
+		font-size: 40px
 
 	h2, .h2
-		font-size: 24px
+		font-size: 36px
 
 	h3, .h3
 		font-size: 18px
 
+	.mb-65
+		margin-bottom: 44px
+
 	footer
+		.logo
+			max-width: 102px
 		.phone
-			font-size: 20px
-			margin: 20px 0 10px
+			font-size: 36px
+			margin: 30px 0
+			width: 100%
 		.menu
 			margin: 30px 0 0
+			width: fit-content
+			max-width: 190px
 			li
-				margin: 0 0 20px
+				width: 100%
+		.list-social
+			margin: 38px 33px 0 auto
+			flex-direction: column
+			li
+				margin: 0 0 44px
+				&:last-child
+					margin: 0
+
+	.footer-col
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
 
 	.footer-content
-		margin: 40px 0
+		margin: 50px 0
 
 	.news-card
 		max-width: none
@@ -492,37 +620,71 @@
 	.partners-logo
 		width: 33.33%
 		height: 50px
+		display: none
+		&:nth-child(-n+6)
+			display: flex
 
 	.faces-company-card
+		font-size: 20px
 		&__photo
 			width: 100%
-			height: auto
+			height: 204px
 			margin: 0 auto 20px
 		&__body
 			width: 100%
 			padding: 0
 		&__position
-			margin: 10px 0 20px
+			margin: 10px 0 40px
+		.h3
+			font-size: 24px
 
-	.nav-tabs .nav-item
-		margin: 0 0 10px
-		width: 100%
+	.nav-tabs
+		.nav-item
+			text-align: left
+			margin: 0 auto 0 0
+			width: calc(50% - 24px)
+			&:last-child
+				margin: 0
+		.nav-link
+			text-align: left
 
 	.advantages-section
 		margin: 60px 0 40px
 
+	.advantages-section-wrapper
+		flex-direction: column
+
+	.advantages-numbers .advantages-box
+		max-width: none
+		margin: 0 0 40px
+		.h2
+			font-size: 32px
 
 	.advantages-box
 		width: 100%
+		max-width: 225px
+		margin: 0 0 55px
 		&__img
-			height: 300px
+			height: 302px
+		&:nth-child(2)
+			margin-left: auto
+		&:last-child
+			max-width: none
+			.advantages-box__img
+				height: 364px
 
 	.callback-content
 		.box-text
-			max-width: 300px
+			max-width: 294px
 		&::before
-			width: 80px
-			height: 60px
+			width: 129px
+			height: 107px
+			top: 0
+			right: 0
+			bottom: auto
+		h2
+			max-width: 187px
+			margin: 0 0 16px
 
 	.our-fleet-slider
 		padding: 0 15px
@@ -530,11 +692,11 @@
 			width: 100%
 			margin: 0
 		&__nav
-			max-width: none		
+			max-width: none
 
 	input, textarea, select
 		font-size: 16px
-		padding: 10px 20px				
+		padding: 10px 20px
 
 	.accordion-button:after
 		width: 20px
@@ -552,4 +714,49 @@
 		.btn
 			margin: 20px 0 0
 		.h3
-			font-size: 18px				
+			font-size: 18px
+
+@media only screen and (max-width: 370px)
+	.logo-text
+		max-width: 140px
+
+	.logo-icon
+		max-width: 80px
+
+	.home .phone
+		font-size: 40px
+
+	.link-tg
+		font-size: 15px
+		&__icon
+			width: 50px
+			height: 50px
+			padding: 10px 14px 10px 10px
+		&__text
+			max-width: 78px
+
+	.list-advantages
+		max-width: 210px
+		font-size: 16px
+
+	.list-advantages-item__icon
+		width: 30px
+		height: 30px
+		min-width: 30px
+
+	.advantages-numbers .advantages-box .h1
+		font-size: 56px
+
+	.callback-content
+		padding: 30px 26px
+		&::before
+			width: 100px
+			height: 90px
+
+	.nav-tabs
+		font-size: 20px
+
+	.faces-company-card
+		font-size: 18px
+		.h3
+			font-size: 20px

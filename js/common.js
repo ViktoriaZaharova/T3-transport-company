@@ -8,6 +8,13 @@ $('.mobile-menu__close').on('click', function () {
 	$('.mobile-menu').fadeOut();
 });
 
+$('.advantages-slider').slick({
+	slidesToShow: 1,
+	fade: true,
+	prevArrow: '<button type="button" class="slick-prev"><svg class="svg-icon"><use xlink:href="img/sprite.svg#prev"></use></svg></button>',
+	nextArrow: '<button type="button" class="slick-next"><svg class="svg-icon"><use xlink:href="img/sprite.svg#next"></use></svg></button>',
+});
+
 $('.our-fleet-slider').slick({
 	slidesToShow: 1,
 	variableWidth: true,
@@ -40,7 +47,7 @@ $('.reviews-slider').slick({
 			breakpoint: 768,
 			settings: {
 				slidesToShow: 2,
-				variableWidth: false,
+				variableWidth: true,
 				centerMode: false,
 			}
 		},
@@ -48,7 +55,7 @@ $('.reviews-slider').slick({
 			breakpoint: 576,
 			settings: {
 				slidesToShow: 1,
-				variableWidth: false,
+				variableWidth: true,
 				centerMode: false,
 			}
 		}

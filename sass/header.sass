@@ -1,7 +1,7 @@
 @import "vars"
 
 header
-	padding: 40px 0
+	padding: 50px 0 53px
 	position: fixed
 	left: 0
 	top: 0
@@ -9,9 +9,8 @@ header
 	z-index: 10
 	background: #fff
 	.phone
-		margin: 0 130px 0 90px
-	.logo
-		margin: 0 auto 0 0	
+		margin: 0 90px 0 110px
+
 
 .phone
 	font-size: 36px
@@ -26,11 +25,17 @@ header
 
 .logo
 	@include d-flex
-	max-width: 153px
-	width: 100%		
+
+.logo-icon
+	margin: 0
+	max-width: 118px
+
+.logo-text
+	max-width: 290px
+	margin: 0 0 0 17px		
 
 .nav-menu
-	margin: 0 87px 0 0	
+	margin: 0 auto
 
 .menu
 	display: flex
@@ -55,50 +60,45 @@ header
 	z-index: 11
 	top: 0
 	right: 0
-	max-width: 280px
+	max-width: 320px
 	width: 100%
 	height: 100%
 	overflow-y: auto
-	padding: 30px
+	padding: 25px 30px 55px 37px
 	box-shadow: 0 0 10px #EBEBEB
 	background: #fff
+	.logo
+		max-width: 104px
 	&__head
 		width: 100%
 		display: flex
-		align-items: center
+		align-items: start
 	&__body
 		width: 100%
 		margin: 20px 0 0
 	&__close
 		@include d-flex
 		position: relative
-		width: 24px
-		height: 24px
+		width: 26px
+		height: 26px
 		cursor: pointer
 		margin: 0 0 0 auto
-		&::before, &::after
-			content: ''
-			position: absolute
-			left: 10px
-			top: 0
-			background: $accent
-			width: 2px
-			height: 100%
-			border-radius: 2px
-		&::before
-			transform: rotate(45deg)
-		&::after
-			transform: rotate(135deg)		
+		fill: $accent
 	.logo
 		max-width: 100px
 	.menu
-		font-size: 18px
+		font-size: 24px
+		margin: 120px 0
 		li
 			width: 100%
-			margin: 0 0 20px
+			margin: 0 0 30px
 	.phone
-		font-size: 20px
+		font-weight: bold
+		color: #000
+		font-size: 32px
 		margin: 20px 0
 	.btn
-		padding: 10px
+		padding: 15px 30px
+		height: auto
+		font-size: 20px
 

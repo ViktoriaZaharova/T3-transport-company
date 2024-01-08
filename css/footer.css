@@ -4,6 +4,13 @@ footer {
   position: relative;
   overflow: hidden;
 }
+footer .logo {
+  max-width: 153px;
+  width: 100%;
+}
+footer .logo img {
+  width: 100%;
+}
 footer .phone {
   margin: 64px 0 13px;
 }

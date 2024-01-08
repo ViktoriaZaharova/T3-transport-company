@@ -13,12 +13,6 @@
   .reviews-slider {
     width: calc(100% + 1000px);
   }
-  .address-box {
-    font-size: 16px;
-  }
-  .home-image {
-    max-width: 700px;
-  }
   h1, .h1 {
     font-size: 100px;
   }
@@ -42,15 +36,6 @@
   .list-advantages {
     font-size: 18px;
   }
-  .list-advantages-item {
-    margin: 0 20px 10px 0;
-  }
-  .list-advantages-item:last-child {
-    margin: 0 0 10px;
-  }
-  .list-advantages-item:first-child .list-advantages-item__text {
-    max-width: 125px;
-  }
   .advantages-section {
     margin: 120px 0 70px;
   }
@@ -60,18 +45,21 @@
   h3, .h3 {
     font-size: 26px;
   }
-  .home-image {
-    max-width: 500px;
-  }
   .documents-box {
     padding: 30px;
   }
   .documents-box__body {
     padding: 0 0 0 50px;
   }
+  .documents-box-archive {
+    padding: 16px 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .documents-box-archive .btn-next {
-    width: 50px;
-    height: 50px;
+    width: 74px;
+    height: 100%;
   }
   .slick-arrow {
     width: 50px;
@@ -99,11 +87,11 @@
   }
   .corporate-values-box {
     font-size: 26px;
-    padding: 15px 30px;
+    padding: 26px 42px;
   }
   .codex-box p {
-    font-size: 18px;
-    margin: 0 0 10px;
+    font-size: 24px;
+    margin: 0 auto 22px;
   }
   .news-card {
     max-width: calc(33.33% - 20px);
@@ -123,17 +111,21 @@
     margin: 0 20px 0 0;
   }
   header {
-    padding: 20px 0;
+    padding: 24px 0 31px;
   }
   .phone {
     font-size: 24px;
   }
   .btn-burger {
-    width: 30px;
-    height: 24px;
+    width: 31px;
+    height: 31px;
   }
-  .logo {
-    max-width: 120px;
+  .logo-text {
+    max-width: 170px;
+    margin: 0 0 0 14px;
+  }
+  .logo-icon {
+    max-width: 104px;
   }
   h1, .h1 {
     font-size: 90px;
@@ -188,8 +180,23 @@
   .news-card {
     max-width: calc(50% - 20px);
   }
+  .advantages-numbers .advantages-box {
+    padding: 0 10px 0 0;
+  }
+  .advantages-numbers .advantages-box:last-child {
+    padding: 0;
+  }
+  .advantages-numbers .advantages-box::before {
+    right: 0;
+  }
+  footer .menu {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 1200px) {
+  header .logo {
+    margin: 0 auto 0 0;
+  }
   .address-box {
     margin: 0 0 30px;
   }
@@ -197,7 +204,7 @@
     font-size: 24px;
   }
   .advantages-section {
-    margin: 90px 0 60px;
+    margin: 84px 0 66px;
   }
   h1, .h1 {
     font-size: 70px;
@@ -210,23 +217,6 @@
   }
   .advantages-box__body {
     padding: 20px 0 0;
-  }
-  .list-advantages {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .list-advantages-item {
-    width: 100%;
-    margin: 0 0 20px;
-  }
-  .list-advantages-item:last-child {
-    margin: 0;
-  }
-  .list-advantages-item__text {
-    max-width: none;
-  }
-  .list-advantages-item:first-child .list-advantages-item__text, .list-advantages-item:last-child .list-advantages-item__text {
-    max-width: none;
   }
   header .nav-menu {
     display: none;
@@ -247,7 +237,7 @@
     padding: 20px 0 0;
   }
   .services-box .h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .services-box .link {
     margin: 20px 0 0;
@@ -287,10 +277,23 @@
   }
 }
 @media only screen and (max-width: 992px) {
-  .home-image {
-    position: relative;
-    max-width: none;
-    height: auto;
+  .services-box-max {
+    padding: 0 0 24px;
+  }
+  .services-box-max::before {
+    right: auto;
+    left: 0;
+    height: 421px;
+  }
+  .services-box-max .services-box__body {
+    padding: 27px 29px 0;
+  }
+  .services-box-max .services-box__img {
+    width: calc(100% - 43px);
+    height: 409px;
+  }
+  .home h1 {
+    max-width: 565px;
   }
   .home-content {
     margin: 30px 0;
@@ -300,10 +303,27 @@
   }
   .advantages-box {
     width: calc(50% - 15px);
-    margin: 0 0 30px;
+    margin: 0 0 40px;
   }
   .advantages-numbers .advantages-box {
+    text-align: center;
     width: 100%;
+    padding: 15px 20px;
+    background: #FFF;
+    -webkit-box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+  }
+  .advantages-numbers .advantages-box:last-child {
+    padding: 15px 20px;
+  }
+  .advantages-numbers .advantages-box::before {
+    display: none;
+  }
+  .advantages-numbers .advantages-box .h1 {
+    width: 100%;
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #000;
   }
   .mb-40 {
     margin-bottom: 25px;
@@ -354,7 +374,8 @@
   }
   .map {
     min-width: auto;
-    height: 300px;
+    height: 455px;
+    margin: 0 0 26px;
   }
   footer .menu {
     margin: 0;
@@ -379,7 +400,7 @@
     font-size: 28px;
   }
   .services-box__img {
-    height: 300px;
+    height: 250px;
   }
   .modal-v2 .modal-header {
     max-width: 300px;
@@ -387,10 +408,87 @@
   .modal-v2 .modal-body {
     width: calc(100% - 300px);
   }
+  .faces-company-card__photo {
+    height: 500px;
+    width: 100%;
+  }
+  .faces-company-card__body {
+    width: 100%;
+    padding: 20px 0 0;
+  }
+}
+@media only screen and (max-width: 870px) {
+  header .phone, header .btn-callback {
+    display: none;
+  }
+  .home {
+    background: url("../img/home-bg-mobile.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .home::before {
+    display: none;
+  }
+  .home .phone {
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 48px;
+  }
+  .home h1 {
+    padding: 20px;
+    max-width: 331px;
+    margin: 0 0 406px;
+  }
+  .home .link-tg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home-content {
+    position: relative;
+    margin: 16px 0 0;
+  }
+  h1, .h1 {
+    font-size: 40px;
+  }
+  .list-advantages {
+    padding: 25px 29px 27px 0;
+    margin: 0 0 -126px;
+    max-width: 243px;
+  }
+  .list-advantages::before {
+    width: 615px;
+  }
+  .advantages-numbers .advantages-box .h1 {
+    font-size: 64px;
+  }
 }
 @media only screen and (max-width: 768px) {
-  .decor {
-    display: none;
+  .decor1, .decor2 {
+    width: 164px;
+    height: 250px;
+    display: block;
+  }
+  .decor1 {
+    right: 31px !important;
+    left: auto !important;
+  }
+  .decor2 {
+    right: auto !important;
+    left: 23px !important;
+    top: 123px;
+    bottom: auto;
+  }
+  .decor3 {
+    width: 164px;
+    height: 249px;
+  }
+  .decor4 {
+    width: 95px;
+    height: 145px;
+  }
+  .decor5 {
+    width: 80px;
+    height: 122px;
   }
   .phone {
     font-size: 20px;
@@ -402,7 +500,7 @@
     font-size: 30px;
   }
   h3, .h3, .nav-tabs {
-    font-size: 22px;
+    font-size: 24px;
   }
   .nav-tabs .nav-item {
     margin: 0 20px 0 0;
@@ -410,33 +508,49 @@
   .nav-tabs .nav-item:last-child {
     margin: 0;
   }
-  header .phone, header .btn-callback {
-    display: none;
-  }
   .partners-logo {
     width: 25%;
   }
+  .corporate-values {
+    text-align: center;
+  }
+  .corporate-values .btn {
+    margin: 0 auto;
+  }
+  .corporate-values-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .corporate-values-box {
-    width: 100%;
-    font-size: 18px;
-    margin: 0 0 15px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 24px;
+    margin: 0 auto 27px;
+    text-align: center;
   }
   .corporate-values-box:last-child {
-    margin: 0;
+    margin: 0 auto;
   }
   .codex-box p {
     max-width: none;
   }
   .about {
-    margin: 60px 0 20px;
+    margin: 105px 0 70px;
   }
   .reviews {
     margin: 70px 0;
   }
   .reviews-slider {
-    width: 100%;
+    width: calc(100% + 15px);
   }
   .reviews-slider .slick-slide {
+    width: 249px;
     margin: 0;
     padding: 30px 10px;
   }
@@ -473,32 +587,69 @@
   #callbackModal .modal-title {
     font-size: 20px;
   }
+  .wrapper::before, .wrapper::after {
+    display: block;
+  }
 }
 @media only screen and (max-width: 576px) {
   .phone {
     font-size: 16px;
   }
   h1, .h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   h2, .h2 {
-    font-size: 24px;
+    font-size: 36px;
   }
   h3, .h3 {
     font-size: 18px;
   }
+  .mb-65 {
+    margin-bottom: 44px;
+  }
+  footer .logo {
+    max-width: 102px;
+  }
   footer .phone {
-    font-size: 20px;
-    margin: 20px 0 10px;
+    font-size: 36px;
+    margin: 30px 0;
+    width: 100%;
   }
   footer .menu {
     margin: 30px 0 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 190px;
   }
   footer .menu li {
-    margin: 0 0 20px;
+    width: 100%;
+  }
+  footer .list-social {
+    margin: 38px 33px 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .list-social li {
+    margin: 0 0 44px;
+  }
+  footer .list-social li:last-child {
+    margin: 0;
+  }
+  .footer-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .footer-content {
-    margin: 40px 0;
+    margin: 50px 0;
   }
   .news-card {
     max-width: none;
@@ -513,10 +664,19 @@
   .partners-logo {
     width: 33.33%;
     height: 50px;
+    display: none;
+  }
+  .partners-logo:nth-child(-n+6) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .faces-company-card {
+    font-size: 20px;
   }
   .faces-company-card__photo {
     width: 100%;
-    height: auto;
+    height: 204px;
     margin: 0 auto 20px;
   }
   .faces-company-card__body {
@@ -524,27 +684,68 @@
     padding: 0;
   }
   .faces-company-card__position {
-    margin: 10px 0 20px;
+    margin: 10px 0 40px;
+  }
+  .faces-company-card .h3 {
+    font-size: 24px;
   }
   .nav-tabs .nav-item {
-    margin: 0 0 10px;
-    width: 100%;
+    text-align: left;
+    margin: 0 auto 0 0;
+    width: calc(50% - 24px);
+  }
+  .nav-tabs .nav-item:last-child {
+    margin: 0;
+  }
+  .nav-tabs .nav-link {
+    text-align: left;
   }
   .advantages-section {
     margin: 60px 0 40px;
   }
+  .advantages-section-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .advantages-numbers .advantages-box {
+    max-width: none;
+    margin: 0 0 40px;
+  }
+  .advantages-numbers .advantages-box .h2 {
+    font-size: 32px;
+  }
   .advantages-box {
     width: 100%;
+    max-width: 225px;
+    margin: 0 0 55px;
   }
   .advantages-box__img {
-    height: 300px;
+    height: 302px;
+  }
+  .advantages-box:nth-child(2) {
+    margin-left: auto;
+  }
+  .advantages-box:last-child {
+    max-width: none;
+  }
+  .advantages-box:last-child .advantages-box__img {
+    height: 364px;
   }
   .callback-content .box-text {
-    max-width: 300px;
+    max-width: 294px;
   }
   .callback-content::before {
-    width: 80px;
-    height: 60px;
+    width: 129px;
+    height: 107px;
+    top: 0;
+    right: 0;
+    bottom: auto;
+  }
+  .callback-content h2 {
+    max-width: 187px;
+    margin: 0 0 16px;
   }
   .our-fleet-slider {
     padding: 0 15px;
@@ -579,5 +780,55 @@
   }
   .document-card .h3 {
     font-size: 18px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .logo-text {
+    max-width: 140px;
+  }
+  .logo-icon {
+    max-width: 80px;
+  }
+  .home .phone {
+    font-size: 40px;
+  }
+  .link-tg {
+    font-size: 15px;
+  }
+  .link-tg__icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px 14px 10px 10px;
+  }
+  .link-tg__text {
+    max-width: 78px;
+  }
+  .list-advantages {
+    max-width: 210px;
+    font-size: 16px;
+  }
+  .list-advantages-item__icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+  .advantages-numbers .advantages-box .h1 {
+    font-size: 56px;
+  }
+  .callback-content {
+    padding: 30px 26px;
+  }
+  .callback-content::before {
+    width: 100px;
+    height: 90px;
+  }
+  .nav-tabs {
+    font-size: 20px;
+  }
+  .faces-company-card {
+    font-size: 18px;
+  }
+  .faces-company-card .h3 {
+    font-size: 20px;
   }
 }
