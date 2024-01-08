@@ -80,13 +80,11 @@ html, body {
   overflow-x: hidden;
 }
 
-.wrapper {
-  width: 100%;
-  padding: 151px 0 0;
+html {
   position: relative;
   z-index: 1;
 }
-.wrapper::before, .wrapper::after {
+html::before, html::after {
   content: "";
   position: absolute;
   left: 0;
@@ -97,11 +95,18 @@ html, body {
   z-index: -1;
   display: none;
 }
-.wrapper::before {
+html::before {
   top: 0;
 }
-.wrapper::after {
+html::after {
   bottom: 0;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 151px 0 0;
+  position: relative;
+  z-index: 1;
 }
 
 img {
